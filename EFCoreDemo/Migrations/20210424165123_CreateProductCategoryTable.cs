@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace EFCoreDemo.Migrations
 {
-    public partial class AddProductCategoryTable : Migration
+    public partial class CreateProductCategoryTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -40,8 +40,6 @@ namespace EFCoreDemo.Migrations
                 principalTable: "ProductCategory",
                 principalColumn: "ProductCategoryId",
                 onDelete: ReferentialAction.Restrict);
-
-            migrationBuilder.Sql("INSERT INTO ProductCategory(Name, CreatedDate) VALUES('Test', GETDATE())");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

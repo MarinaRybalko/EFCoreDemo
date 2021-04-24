@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using EFCoreDemo.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
@@ -28,12 +27,6 @@ namespace EFCoreDemo.EntityConfigurations
                         .HasOne<Company>()
                         .WithMany()
                         .HasForeignKey("CompanyId"));
-
-            builder.HasData(new List<Company>()
-            {
-                new Company() {Id = 1, Name = "Google", FoundationDate = new DateTime(1998, 09, 04)},
-                new Company() {Id = 2, Name = "Microsoft", FoundationDate = new DateTime(1975, 04, 04)}
-            });
         }
     }
 }

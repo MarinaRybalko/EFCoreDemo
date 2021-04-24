@@ -8,9 +8,9 @@ namespace EFCoreDemo.Entities
         public string Name { get; set; }
 
         public int CategoryId { get; set; }
-        public ProductCategory Category { get; set; }
+        public virtual ProductCategory Category { get; set; }
 
-        public List<Company> Companies { get; set; } = new List<Company>();
-        public List<SupplyHistory> SupplyHistory { get; set; } = new List<SupplyHistory>();
+        public virtual List<Company> Companies { get; set; } = new List<Company>();
+        public virtual List<SupplyHistory> SupplyHistory { get; set; } = new List<SupplyHistory>();
     }
 }

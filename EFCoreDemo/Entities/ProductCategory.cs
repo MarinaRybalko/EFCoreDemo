@@ -9,6 +9,6 @@ namespace EFCoreDemo.Entities
         public string Name { get; set; }
         public DateTime CreatedDate { get; set; }
 
-        public List<Product> Products { get; set; } = new List<Product>();
+        public virtual List<Product> Products { get; set; } = new List<Product>();
     }
 }

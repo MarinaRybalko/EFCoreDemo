@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFCoreDemo.Migrations
 {
     [DbContext(typeof(ApplicationContext))]
-    [Migration("20210421181402_InitialCreate")]
+    [Migration("20210424164646_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -46,20 +46,6 @@ namespace EFCoreDemo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Company");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            FoundationDate = new DateTime(1998, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Google"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            FoundationDate = new DateTime(1975, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Name = "Microsoft"
-                        });
                 });
 
             modelBuilder.Entity("EFCoreDemo.Entities.Product", b =>
@@ -79,23 +65,6 @@ namespace EFCoreDemo.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Product");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Laptop"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Phone"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Headphones"
-                        });
                 });
 
             modelBuilder.Entity("EFCoreDemo.Entities.SupplyHistory", b =>

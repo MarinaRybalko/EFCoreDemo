@@ -130,25 +130,6 @@ namespace EFCoreDemo.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
-            migrationBuilder.InsertData(
-                table: "Company",
-                columns: new[] { "CompanyId", "FoundationDate", "Name", "Revenue" },
-                values: new object[,]
-                {
-                    { 1, new DateTime(1998, 9, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "Google", null },
-                    { 2, new DateTime(1975, 4, 4, 0, 0, 0, 0, DateTimeKind.Unspecified), "Microsoft", null }
-                });
-
-            migrationBuilder.InsertData(
-                table: "Product",
-                columns: new[] { "ProductId", "Name" },
-                values: new object[,]
-                {
-                    { 1, "Laptop" },
-                    { 2, "Phone" },
-                    { 3, "Headphones" }
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Supply_ProductId",
                 table: "Supply",
